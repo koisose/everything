@@ -1,112 +1,37 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
-import Counter from "~/components/starter/counter/counter";
-import Hero from "~/components/starter/hero/hero";
-import Infobox from "~/components/starter/infobox/infobox";
-import Starter from "~/components/starter/next-steps/next-steps";
-
 export default component$(() => {
   return (
     <>
-      <Hero />
-      <Starter />
-
-      <div role="presentation" class="ellipsis"></div>
-      <div role="presentation" class="ellipsis ellipsis-purple"></div>
-
-      <div class="container container-center container-spacing-xl">
-        <h3>
-          You can <span class="highlight">count</span>
-          <br /> on me
-        </h3>
-        <Counter />
-      </div>
-
-      <div class="container container-flex">
-        <Infobox>
-          <div q:slot="title" class="icon icon-cli">
-            CLI Commands
-          </div>
-          <>
-            <p>
-              <code>npm run dev</code>
-              <br />
-              Starts the development server and watches for changes
-            </p>
-            <p>
-              <code>npm run preview</code>
-              <br />
-              Creates production build and starts a server to preview it
-            </p>
-            <p>
-              <code>npm run build</code>
-              <br />
-              Creates production build
-            </p>
-            <p>
-              <code>npm run qwik add</code>
-              <br />
-              Runs the qwik CLI to add integrations
-            </p>
-          </>
-        </Infobox>
-
-        <div>
-          <Infobox>
-            <div q:slot="title" class="icon icon-apps">
-              Example Apps
-            </div>
-            <p>
-              Have a look at the <a href="/demo/flower">Flower App</a> or the{" "}
-              <a href="/demo/todolist">Todo App</a>.
-            </p>
-          </Infobox>
-
-          <Infobox>
-            <div q:slot="title" class="icon icon-community">
-              Community
-            </div>
-            <ul>
-              <li>
-                <span>Questions or just want to say hi? </span>
-                <a href="https://qwik.builder.io/chat" target="_blank">
-                  Chat on discord!
-                </a>
-              </li>
-              <li>
-                <span>Follow </span>
-                <a href="https://twitter.com/QwikDev" target="_blank">
-                  @QwikDev
-                </a>
-                <span> on Twitter</span>
-              </li>
-              <li>
-                <span>Open issues and contribute on </span>
-                <a href="https://github.com/BuilderIO/qwik" target="_blank">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <span>Watch </span>
-                <a href="https://qwik.builder.io/media/" target="_blank">
-                  Presentations, Podcasts, Videos, etc.
-                </a>
-              </li>
-            </ul>
-          </Infobox>
+    <section class="w-full h-screen flex flex-col items-center justify-center space-y-4">
+      <h1 class="text-4xl font-bold">Where do you go?</h1>
+      <div class="flex flex-col space-y-4">
+        <div class="w-full h-16 bg-white shadow rounded-md flex items-center justify-between px-4 space-x-4">
+          <h2 class="text-2xl font-medium flex-grow">Nostr Bounties</h2>
+          <a href="/nostr" target="_blank" rel="noopener noreferrer" class="text-white bg-gray-800 px-4 py-2 rounded-md">
+            Go
+          </a>
         </div>
+        <div class="w-full h-16 bg-white shadow rounded-md flex items-center justify-between px-4 space-x-4">
+          <h2 class="text-2xl font-medium flex-grow">Palm AI Scraper</h2>
+          <a href="palmai" target="_blank" rel="noopener noreferrer" class="text-white bg-gray-800 px-4 py-2 rounded-md">
+            Go
+          </a>
+        </div>
+
       </div>
+    </section>
     </>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "palm scraper",
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: "Scraping using palm 2 api",
     },
   ],
 };
