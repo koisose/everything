@@ -1,5 +1,4 @@
 import { component$, useSignal } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
   const closeModal = useSignal(false);
@@ -92,13 +91,3 @@ export default component$(() => {
     </>
   );
 });
-
-export const head: DocumentHead = {
-  title: "palm scraper",
-  meta: [
-    {
-      name: "description",
-      content: "Scraping using palm 2 api",
-    },
-  ],
-};
